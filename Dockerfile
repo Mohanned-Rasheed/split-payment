@@ -8,4 +8,5 @@ RUN ./mvnw clean package -DskipTests || (echo '❌ Build failed' && ls -la targe
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["java", "-jar", "target/split-payment-0.0.1-SNAPSHOT.jar"]
+
