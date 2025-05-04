@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN ./mvnw clean package -DskipTests || exit 1
+RUN ./mvnw clean package -DskipTests || (echo '❌ Build failed' && ls -la target && exit 1)
 
 EXPOSE 8080
 
